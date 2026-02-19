@@ -1,39 +1,62 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const sections = ["home", "about", "skills", "projects", "contact"];
 
 function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("home");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  const linkStyle = (id) =>
+    `cursor-pointer transition-colors duration-200 ${
+      active === id
+        ? "text-black font-medium"
+        : "text-gray-500 hover:text-black"
+    }`;
 
   return (
-    <nav className="w-full bg-black text-white px-4 sm:px-8 py-4">
-      <div className="flex justify-between items-center">
-        <h1 className="text-lg sm:text-xl font-bold">Shubham</h1>
+    <nav className="w-full fixed top-0 bg-white border-b border-gray-100 z-50">
+      <div className="w-full px-6 sm:px-10 py-4 flex justify-between items-center">
+
+        
+        {/* Logo / Name */}
+        <h1 className="text-lg font-semibold tracking-tight text-black">
+          Shubham
+        </h1>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6">
-          <li className="hover:text-gray-400 cursor-pointer">Home</li>
-          <li className="hover:text-gray-400 cursor-pointer">About</li>
-          <li className="hover:text-gray-400 cursor-pointer">Projects</li>
-          <li className="hover:text-gray-400 cursor-pointer">Contact</li>
+        <ul className="hidden md:flex gap-8 text-sm">
+          <li onClick={() => scrollToSection("home")} className={linkStyle("home")}>Home</li>
+          <li onClick={() => scrollToSection("about")} className={linkStyle("about")}>About</li>
+          <li onClick={() => scrollToSection("skills")} className={linkStyle("skills")}>Skills</li>
+          <li onClick={() => scrollToSection("projects")} className={linkStyle("projects")}>Projects</li>
+          <li onClick={() => scrollToSection("contact")} className={linkStyle("contact")}>Contact</li>
         </ul>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-2xl"
-          onClick={() => setOpen(!open)}
-        >
-          ☰
-        </button>
       </div>
-
-      {/* Mobile Menu */}
-      {open && (
-        <ul className="md:hidden mt-4 flex flex-col gap-4 text-center">
-          <li className="hover:text-gray-400">Home</li>
-          <li className="hover:text-gray-400">About</li>
-          <li className="hover:text-gray-400">Projects</li>
-          <li className="hover:text-gray-400">Contact</li>
-        </ul>
-      )}
     </nav>
   );
 }

@@ -1,23 +1,30 @@
-function ProjectCard({ project }) {
-  return (
-    <div className="bg-white p-4 rounded-lg shadow-sm">
-      <h3 className="text-lg font-bold">{project.title}</h3>
-      <p className="text-gray-600 text-sm mt-2">
-        {project.description}
-      </p>
+import { useEffect, useState } from "react";
+import ProjectCard from "./ProjectCard";
 
-      <div className="flex flex-wrap gap-2 mt-3">
-        {project.techStack.map((tech) => (
-          <span
-            key={tech}
-            className="text-xs bg-gray-200 px-2 py-1 rounded"
-          >
-            {tech}
-          </span>
-        ))}
+function Projects() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/projects")
+      .then(res => res.json())
+      .then(data => setProjects(data));
+  }, []);
+
+  return (
+    <section id="projects" className="w-full px-4 sm:px-8 py-16 bg-white">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">
+          Projects
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {projects.map(project => (
+            <ProjectCard key={project._id} project={project} />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
-export default ProjectCard;
+export default Projects;
