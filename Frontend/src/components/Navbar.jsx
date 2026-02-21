@@ -39,7 +39,7 @@ function Navbar() {
     }`;
 
   return (
-    <nav className="w-full fixed top-0 bg-white border-b border-gray-100 z-50">
+    <nav className="w-full fixed top-0 bg-white border-b border-gray-200 z-50">
       <div className="w-full px-6 sm:px-10 py-6 flex justify-between items-center">
 
         

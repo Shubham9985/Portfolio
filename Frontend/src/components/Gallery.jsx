@@ -7,7 +7,7 @@ const images = [
 
 const Gallery = () => {
   return (
-    <section id="gallery" className="w-full px-6 sm:px-10 py-20 bg-white">
+    <section id="gallery" className="w-full px-6 sm:px-10 py-20 bg-gray-100">
       <div className="max-w-6xl mx-auto">
         
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10">

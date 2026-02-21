@@ -2,7 +2,7 @@ function About() {
   return (
     <section
       id="about"
-      className="w-full px-4 sm:px-8 py-16 bg-white"
+      className="w-full px-4 sm:px-8 py-16  bg-gray-100"
     >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-center">
         
