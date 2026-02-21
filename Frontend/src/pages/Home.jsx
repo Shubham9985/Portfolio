@@ -4,7 +4,7 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Hero from "./Hero";
-
+import Gallery from "../components/Gallery";
 
 function Home() {
 
@@ -24,6 +24,7 @@ function Home() {
         <Hero/>
         <About />
         <Skills />
+        <Gallery />
         <Projects />
         <Contact />
 
