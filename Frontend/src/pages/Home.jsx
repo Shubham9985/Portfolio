@@ -6,6 +6,8 @@ import Contact from "../components/Contact";
 import Hero from "./Hero";
 import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";  
+import WhyIBuild from "../components/WhyIBuild";
+import CurrentlyBuilding from "../components/CurrentlyBuilding";
 
 function Home() {
 
@@ -23,6 +25,8 @@ function Home() {
       <div className="pt-20" >
         
         <Hero/>
+        <WhyIBuild />
+        <CurrentlyBuilding/>
         <About />
         <Skills />
         <Gallery />
