@@ -5,6 +5,7 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Hero from "./Hero";
 import Gallery from "../components/Gallery";
+import Footer from "../components/Footer";  
 
 function Home() {
 
@@ -27,6 +28,8 @@ function Home() {
         <Gallery />
         <Projects />
         <Contact />
+        <Footer />
+
 
       </div>
 

@@ -1,3 +1,4 @@
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 const Hero = () => {
 
     const scrollToSection = (id) => {
@@ -24,7 +25,7 @@ const Hero = () => {
                         and clean, user-friendly interfaces.
                     </p>
 
-                    <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                    <div className="hidden sm:flex mt-10 flex-col sm:flex-row gap-4">
                         <button
                             onClick={() => scrollToSection("projects")}
                             className="px-8 py-3 rounded-lg bg-black text-white hover:bg-gray-800 transition"
@@ -42,16 +43,47 @@ const Hero = () => {
                 </div>
 
                 {/* RIGHT IMAGE */}
-                <div className="flex justify-center md:justify-end">
-                    <div className="w-48 h-48 sm:w-60 sm:h-60 rounded-full bg-gray-100 flex items-center justify-center overflow-hidden">
+                <div className="flex flex-col items-center md:items-end">
 
-                        {/* Replace src with your image */}
+                    <div className="w-48 h-48 sm:w-60 sm:h-60 rounded-full bg-gray-100 
+                    flex items-center justify-center overflow-hidden">
                         <img
                             src="/profile.jpg"
                             alt="profile"
                             className="w-full h-full object-cover"
                         />
                     </div>
+
+                    {/* SOCIAL ICONS */}
+                    {/* <div className="flex gap-4 mt-4 text-gray-500 text-xl">
+                        <a
+                            href="https://github.com/yourusername"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-black transition"
+                        >
+                            <FaGithub />
+                        </a>
+
+                        <a
+                            href="https://linkedin.com/in/yourusername"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-black transition"
+                        >
+                            <FaLinkedin />
+                        </a>
+
+                        <a
+                            href="https://instagram.com/yourusername"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-black transition"
+                        >
+                            <FaInstagram />
+                        </a>
+                    </div> */}
+
                 </div>
 
             </div>
