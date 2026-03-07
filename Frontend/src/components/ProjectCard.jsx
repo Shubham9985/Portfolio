@@ -1,9 +1,15 @@
 const ProjectCard = ({ project }) => {
   return (
-    <div className="bg-gray-50 rounded-xl p-5 shadow-sm 
-                    hover:bg-white hover:shadow-md 
-                    transition duration-300">
-      
+    <div className="bg-gray-50 rounded-xl p-5 shadow-sm
+     hover:bg-white hover:shadow-md hover:-translate-y-1 
+     transition duration-300">
+
+
+      <img
+    src={project.image}
+    alt={project.title}
+    className="w-full h-40 object-cover rounded-lg mb-4"
+  />
       <h3 className="text-lg font-semibold text-black">
         {project.title}
       </h3>

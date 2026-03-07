@@ -9,14 +9,16 @@ const Hero = () => {
 
     return (
         <section
-            id="home"
-            className="min-h-screen flex items-center px-6 sm:px-10 bg-white tracking-tight"
-        >
+  id="home"
+  className="min-h-[70vh] md:min-h-screen flex items-center px-6 sm:px-10 bg-white"
+>
             <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center">
 
                 {/* LEFT CONTENT */}
+
                 <div>
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-black">
+
+                    <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight text-black">
                         Hi, I’m Shubham
                     </h1>
                     <p className="mt-4 text-sm tracking-wide text-gray-400 uppercase">
@@ -27,18 +29,20 @@ const Hero = () => {
                         Product Builder • Focused Engineer
                     </p>
 
-                    <div className="hidden sm:flex mt-10 flex-col sm:flex-row gap-4">
+                    <div className="hidden sm:flex mt-6 sm:mt-10 flex-col sm:flex-row gap-4">
 
                         <button
                             onClick={() => scrollToSection("projects")}
-                            className="px-8 py-3 rounded-lg bg-black text-white hover:bg-gray-800 transition"
+                            className="px-8 py-3 rounded-lg bg-black text-white
+                             hover:bg-gray-800 hover:scale-105 transition duration-200"
                         >
                             View Projects
                         </button>
 
                         <button
                             onClick={() => scrollToSection("contact")}
-                            className="px-8 py-3 rounded-lg border border-gray-300 hover:bg-gray-100 transition"
+                            className="px-8 py-3 rounded-lg border border-gray-300
+                             hover:bg-gray-100 hover:scale-105 transition duration-200"
                         >
                             Contact Me
                         </button>

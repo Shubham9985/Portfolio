@@ -16,7 +16,7 @@ const Footer = () => {
             href="https://github.com/yourusername"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-black transition"
+            className="hover:text-black hover:-translate-y-1 transition duration-200"
           >
             <FaGithub />
           </a>
@@ -25,7 +25,7 @@ const Footer = () => {
             href="https://linkedin.com/in/yourusername"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-black transition"
+            className="hover:text-black hover:-translate-y-1 transition duration-200"
           >
             <FaLinkedin />
           </a>
@@ -34,7 +34,7 @@ const Footer = () => {
             href="https://instagram.com/yourusername"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-black transition"
+            className="hover:text-black hover:-translate-y-1 transition duration-200"
           >
             <FaInstagram />
           </a>
