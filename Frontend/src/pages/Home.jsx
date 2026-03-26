@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
 import Skills from "../components/Skills";
@@ -13,53 +14,60 @@ import SectionWrapper from "../components/SectionWrapper";
 
 function Home() {
 
-  const scrollToSection = (id) => {
+  const [activeSection, setActiveSection] = useState("home");
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleSectionChange = (id) => {
+    setActiveSection(id);
+
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth"
     });
   };
 
-
   return (
     <>
-      <Navbar />
+      {/* ✅ PASS PROP HERE */}
+      <Navbar onNavigate={handleSectionChange} />
 
-      <div className="pt-20" >
+      <div className="pt-20">
 
         <Hero />
-        <SectionWrapper>
-          <WhyIBuild />
-        </SectionWrapper>
 
-        <SectionWrapper>
-          <CurrentlyBuilding />
-        </SectionWrapper>
+        {/* ✅ MOBILE VIEW */}
+        {isMobile && activeSection !== "home" && (
+          <SectionWrapper>
+            {activeSection === "about" && <About />}
+            {activeSection === "skills" && <Skills />}
+            {activeSection === "gallery" && <Gallery />}
+            {activeSection === "projects" && <Projects />}
+            {activeSection === "contact" && <Contact />}
+          </SectionWrapper>
+        )}
 
-        <SectionWrapper>
-          <About />
-        </SectionWrapper>
+        {/* ✅ DESKTOP VIEW */}
+        {!isMobile && (
+          <>
+            <SectionWrapper><WhyIBuild /></SectionWrapper>
+            <SectionWrapper><CurrentlyBuilding /></SectionWrapper>
+            <SectionWrapper><About /></SectionWrapper>
+            <SectionWrapper><Skills /></SectionWrapper>
+            <SectionWrapper><Gallery /></SectionWrapper>
+            <SectionWrapper><Projects /></SectionWrapper>
+            <SectionWrapper><Contact /></SectionWrapper>
+          </>
+        )}
 
-        <SectionWrapper>
-          <Skills />
-        </SectionWrapper>
-
-        <SectionWrapper>
-          <Gallery />
-        </SectionWrapper>
-
-        <SectionWrapper>
-          <Projects />
-        </SectionWrapper>
-
-        <SectionWrapper>
-          <Contact />
-        </SectionWrapper>
         <Footer />
         <BackToTop />
 
       </div>
-
-
     </>
   );
 }

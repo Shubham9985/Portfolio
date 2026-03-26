@@ -7,13 +7,13 @@ const Footer = () => {
 
         {/* Name */}
         <h3 className="text-lg font-semibold text-black">
-          Shubham
+          Connect With ME!
         </h3>
 
         {/* Social Links */}
         <div className="flex gap-6 text-gray-500 text-xl">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/Shubham9985"
             target="_blank"
             rel="noreferrer"
             className="hover:text-black hover:-translate-y-1 transition duration-200"
@@ -22,7 +22,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/shubhamkumar0114"
             target="_blank"
             rel="noreferrer"
             className="hover:text-black hover:-translate-y-1 transition duration-200"
@@ -31,7 +31,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://instagram.com/yourusername"
+            href="https://www.instagram.com/shubhamm0_1/"
             target="_blank"
             rel="noreferrer"
             className="hover:text-black hover:-translate-y-1 transition duration-200"

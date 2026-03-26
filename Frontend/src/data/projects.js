@@ -1,13 +1,13 @@
 export const projects = [
   {
     id: 1,
-    title: "Portfolio Platform",
+    title: "Doctor Appointment Booking System",
     description:
-      "A personal portfolio platform built to showcase projects, technical skills, and contact functionality with a modern responsive UI.",
+      "A comprehensive doctor appointment booking system that allows users to schedule appointments, view doctor profiles, and manage their bookings, while providing doctors with a platform to manage their schedules and patient interactions.",
     techStack: ["React", "Node.js", "MongoDB", "Tailwind"],
-    github: "https://github.com/yourusername/portfolio",
-    live: "https://yourportfolio.com",
-    image: "/projects/portfolio.png"
+    github: "https://github.com/Shubham9985/doctor_appointment",
+    live: "https://doctor-appointment-frontend-two.vercel.app/",
+    image: "/projects/doctorapp.png"
   },
 
   {
@@ -16,8 +16,8 @@ export const projects = [
     description:
       "A full-stack e-commerce application supporting product browsing, authentication, and order management designed to simulate real-world shopping workflows.",
     techStack: ["React", "Node", "MongoDB", "Express"],
-    github: "https://github.com/yourusername/ecommerce",
-    live: "https://ecommerce-demo.com",
+    github: "https://github.com/Shubham9985/E-commerce_app",
+    live: "https://e-commerce-frontend-five-lyart.vercel.app/",
     image: "/projects/ecommerce.png"
   }
 ];

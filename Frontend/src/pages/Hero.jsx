@@ -19,7 +19,7 @@ const Hero = () => {
                 <div>
 
                     <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight text-black">
-                        Hi, I’m Shubham
+                        Hi, I’m 'Shubham'
                     </h1>
                     <p className="mt-4 text-sm tracking-wide text-gray-400 uppercase">
                         Engineering products from zero to launch
@@ -57,6 +57,9 @@ const Hero = () => {
                         </a>
 
                     </div>
+                    {/* <p className="mt-6 text-gray-500 text-base sm:text-lg max-w-xl leading-relaxed">
+                        Web Developer • Problem Solving
+                    </p> */}
                 </div>
 
                 {/* RIGHT IMAGE */}

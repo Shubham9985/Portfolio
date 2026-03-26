@@ -24,7 +24,8 @@ function Skills() {
           {skills.map((skill) => (
             <div
               key={skill}
-              className="bg-white py-3 px-4 text-center rounded-lg shadow-sm"
+              className="bg-white border border-gray-100 py-3 px-4 text-center
+              hover:scale-105 transition duration-200 rounded-lg shadow-sm"
             >
               {skill}
             </div>
