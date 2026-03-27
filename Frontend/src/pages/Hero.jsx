@@ -10,9 +10,9 @@ const Hero = () => {
     return (
         <section
   id="home"
-  className="min-h-[70vh] md:min-h-screen flex items-center px-6 sm:px-10 bg-white"
+  className="min-h-[70vh] md:min-h-screen flex items-center px-4 sm:px-8 bg-white"
 >
-            <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center">
+            <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-6 items-center">
 
                 {/* LEFT CONTENT */}
 
@@ -33,7 +33,7 @@ const Hero = () => {
 
                         <button
                             onClick={() => scrollToSection("projects")}
-                            className="px-8 py-3 rounded-lg bg-black text-white
+                            className="px-6 py-3 rounded-lg bg-black text-white
                              hover:bg-gray-800 hover:scale-105 transition duration-200"
                         >
                             View Projects
@@ -41,7 +41,7 @@ const Hero = () => {
 
                         <button
                             onClick={() => scrollToSection("contact")}
-                            className="px-8 py-3 rounded-lg border border-gray-300
+                            className="px-6 py-3 rounded-lg border border-gray-300
                              hover:bg-gray-100 hover:scale-105 transition duration-200"
                         >
                             Contact Me
@@ -51,7 +51,7 @@ const Hero = () => {
                             href="/resume.pdf"
                             target="_blank"
                             rel="noreferrer"
-                            className="px-8 py-3 rounded-lg border border-gray-300 hover:bg-gray-100 transition text-center"
+                            className="px-6 py-3 rounded-lg border border-gray-300 hover:bg-gray-100 transition text-center"
                         >
                             View Resume
                         </a>
@@ -65,7 +65,7 @@ const Hero = () => {
                 {/* RIGHT IMAGE */}
                <div className="flex flex-col items-center mt-8 md:mt-0">
 
-  <div className="w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 
+  <div className="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 
                   rounded-full border border-gray-300 shadow-sm 
                   flex items-center justify-center overflow-hidden bg-white
                   transition duration-300 hover:scale-105 hover:shadow-md hover:ring-2 hover:ring-gray-300 p-1">

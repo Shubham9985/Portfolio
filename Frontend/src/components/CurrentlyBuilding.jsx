@@ -7,7 +7,7 @@ const items = [
 
 const CurrentlyBuilding = () => {
   return (
-    <section className="w-full px-6 sm:px-10 py-24 bg-white">
+    <section className="w-full px-4 sm:px-8 py-24 bg-white">
       <div className="max-w-4xl mx-auto text-center">
 
         <h2 className="text-2xl sm:text-3xl font-semibold text-black">

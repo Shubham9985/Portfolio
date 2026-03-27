@@ -59,7 +59,7 @@ function Navbar({ onNavigate }) {
 
   return (
     <nav className="w-full fixed top-0 bg-white border-b border-gray-200 z-50">
-      <div className="w-full px-6 sm:px-10 py-5 flex justify-between items-center">
+      <div className="w-full px-4 sm:px-8 py-5 flex justify-between items-center">
 
         {/* Logo */}
         <div className="flex flex-col leading-tight">
@@ -94,7 +94,7 @@ function Navbar({ onNavigate }) {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 px-6 py-4">
+        <div className="md:hidden bg-white border-t border-gray-200 px-4 py-4">
           <ul className="flex flex-col gap-4 text-gray-600">
             {sections.map((sec) => (
               <li

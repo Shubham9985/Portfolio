@@ -4,7 +4,7 @@ function About() {
       id="about"
       className="w-full px-4 sm:px-8 py-16  bg-gray-100"
     >
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-center">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-6 items-center">
 
         {/* Text */}
         <div className="md:w-1/2">
@@ -21,7 +21,7 @@ function About() {
 
         {/* Placeholder for image */}
         <div className="md:w-1/2 flex justify-center">
-          <div className="w-48 h-48 sm:w-60 sm:h-60 
+          <div className="w-40 h-40 sm:w-48 sm:h-48 
                 rounded-full border border-gray-200 shadow-sm 
                 overflow-hidden bg-white">
 

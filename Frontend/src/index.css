@@ -2,11 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Ensure everything respects layout boundaries for mobile */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-
 body {
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent flex items from causing overflow */
+.flex,
+.grid {
+  min-width: 0;
+}
+
+/* Ensure text wraps properly */
+* {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }

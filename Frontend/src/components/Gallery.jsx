@@ -13,7 +13,7 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <section id="gallery" className="w-full px-6 sm:px-10 py-20 bg-gray-100">
+    <section id="gallery" className="w-full px-4 sm:px-8 py-20 bg-gray-100">
       <div className="max-w-6xl mx-auto">
         
         <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-10">
